@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loops</title>
+    </head>
+    <body>
+        <script>
+        // Get the current date and format it as YYYY-MM-DD
+const currentDate = new Date();
+const formattedDate = currentDate.toISOString().split('T')[0];
+console.log("Current date:", formattedDate);
+
+// Print a random set of numbers (e.g., 10 random integers between 1 and 100) using a loop
+console.log("Random set of numbers:");
+for (let i = 0; i < 10; i++) {
+    const randomNum = Math.floor(Math.random() * 100) + 1;
+    process.stdout.write(randomNum + ' ');  // For Node.js; in browser, use console.log without process
+}
+console.log();  // Add a newline after the set
+
+// Generate and print a rounded random number (random float between 0 and 100, rounded to nearest integer)
+const randomFloat = Math.random() * 100;
+const roundedNumber = Math.round(randomFloat);
+console.log("Rounded random number:", roundedNumber);
+
+
+        </script>
+    </body>
+</html>
